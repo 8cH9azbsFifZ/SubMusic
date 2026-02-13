@@ -105,7 +105,7 @@ class IArtwork extends Artwork {
 
 	function save() {
         // do not save if id invalid
-        if (art_id == null) {
+        if (art_id() == null) {
             return false;
         }
         

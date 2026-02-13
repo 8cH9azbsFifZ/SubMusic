@@ -206,12 +206,12 @@ class ISong extends Song {
 		// if new artwork, load it
 		if (art_id() != null) {
 			d_artwork = new IArtwork(art_id(), Artwork.SONG);
-			
+
 			// reference the artwork
 			d_artwork.incRefCount();
+		} else {
+			d_artwork = null;
 		}
-
-		d_artwork = null;
 		return changed;
 	}
 
